@@ -1,0 +1,432 @@
+/**** Sass Variables ****/
+
+* {
+  padding: 0;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  text-transform: uppercase;
+}
+
+body {
+  /* font-family: "Open Sans", sans-serif; */
+
+  background-color: rgb(0, 0, 0);
+
+  height: 100%;
+
+  margin: 0;
+}
+
+.container {
+  max-width: auto;
+
+  display: flex;
+
+  justify-content: space-evenly;
+
+  margin: 50vh auto;
+
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.card-wrapper {
+  width: min-content;
+
+  height: min-content;
+
+  position: relative;
+}
+
+.card {
+  position: absolute;
+
+  width: 350px;
+
+  height: 450px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.card .card-image {
+  position: absolute;
+
+  width: 350px;
+
+  height: 450px;
+
+  z-index: 2;
+
+  background-color: #000;
+
+  transition: 0.5s;
+
+  object-fit: contain;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover img {
+  opacity: 0.4;
+
+  transition: 0.5s;
+}
+
+.card:hover .card-image {
+  transform: translateY(-100px);
+
+  transition: all 0.9s;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 3;
+
+  display: flex;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li a {
+  position: relative;
+
+  display: block;
+
+  width: 50px;
+
+  height: 50px;
+
+  line-height: 50px;
+
+  text-align: center;
+
+  background: #fff;
+
+  font-size: 23px;
+
+  color: #333;
+
+  font-weight: bold;
+
+  margin: 0 6px;
+
+  transition: 0.4s;
+
+  transform: translateY(200px);
+
+  opacity: 0;
+}
+
+.card:hover .social-icons li a {
+  transform: translateY(0px);
+
+  opacity: 1;
+}
+
+.social-icons li a:hover {
+  background: #000;
+
+  transition: 0.2s;
+}
+
+.social-icons li a:hover .fab {
+  color: #fff;
+}
+
+.social-icons li a .fab {
+  transition: 0.8s;
+}
+
+.social-icons li a .fab:hover {
+  transform: rotateY(360deg);
+
+  color: #fff;
+}
+
+.card:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+/**** Personal Details ****/
+
+.details {
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  background: #fff;
+
+  width: 100%;
+
+  height: 120px;
+
+  z-index: 1;
+
+  padding: 10px;
+}
+
+.details h2 {
+  margin: 30px 0;
+
+  padding: 0;
+
+  text-align: center;
+}
+
+.details h2 .job-title {
+  font-size: 1rem;
+
+  line-height: 2.5rem;
+
+  color: #333;
+
+  font-weight: 300;
+}
+
+.jane {
+  position: absolute;
+
+  bottom: -120px;
+
+  left: 0;
+
+  opacity: 0;
+
+  background: #fff;
+
+  width: 100%;
+
+  height: 120px;
+
+  z-index: 3;
+
+  padding: 10px;
+
+  transition: 0.4s;
+}
+
+.profile-two .social-icons li a {
+  border-radius: 50%;
+}
+
+.card:hover .profile-img--two {
+  transform: rotateY(180deg);
+}
+
+.card:hover .jane {
+  bottom: 0;
+
+  left: 0;
+
+  transition-delay: 0.5s;
+
+  opacity: 1;
+}
+
+/* categories */
+div.catagory {
+  margin-top: 30px;
+  padding: 5px;
+}
+
+div.catagory ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+
+div.catagory ul li {
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px;
+  border-radius: 2rem;
+}
+
+div.catagory ul li:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.catagory ul li:hover > a {
+  color: rgba(0, 0, 0, 1);
+}
+/* nav bar  */
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+nav.navbar h1 {
+  font-size: 2rem;
+}
+
+#logo {
+  margin: 30px 75px;
+}
+
+nav ul.navul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.navul li {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.navul > li > a {
+  text-decoration: none;
+  color: white;
+}
+/* gol godo nu css */
+
+#blob {
+  background-color: white;
+  height: 500px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, mediumpurple, bisque);
+  animation: rotate 20s infinite;
+  filter: blur(12vmax);
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  10% {
+    border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%;
+    transition: border-radius 1000ms ease-in-out;
+  }
+
+  30% {
+    border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%;
+    transition: border-radius 1000ms ease-in-out;
+  }
+  50% {
+    border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%;
+    transition: border-radius 1000ms ease-in-out;
+  }
+  70% {
+    border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%;
+    transition: border-radius 1000ms ease-in-out;
+  }
+  90% {
+    border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%;
+    transition: border-radius 1000ms ease-in-out;
+  }
+  100% {
+    border-radius: 60% 30% 70% 40% / 60% 40% 30% 70%;
+    transition: border-radius 1000ms ease-in-out;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+/******************************* to blur the blob *******************************/
+
+#blur {
+  height: auto;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+/* ******************************* code of main page ******************************* */
+
+div.main {
+  height: auto;
+  width: auto;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  height: auto;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+/* ------------------------------footer------------------------------ */
+
+footer {
+  background-color: transparent;
+  padding: 50px;
+  color: gray;
+}
+div.fmain {
+  display: flex;
+  justify-content: space-around;
+}
+div.fmain section {
+  width: 300px;
+}
+div.fmain section h1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: teal;
+}
+div.fmain section p {
+  margin: 2px;
+  padding: 2px;
+}
+.about {
+  line-height: 1.45em;
+}
