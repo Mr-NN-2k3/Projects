@@ -1,1 +1,1 @@
-here the main file is the chatapp. you would like to run it first after creating all the files same way as i did (i.e. inside the Chat_Application)
+here the main file is the chatapp. if you have any probelms regarding the errors and stuff like that plz feel free to contact me
